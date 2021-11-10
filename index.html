@@ -1,0 +1,72 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<html>
+   <head>
+      <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>	
+      <title>DMC Portal</title>
+   </head>
+   <body>
+<p><b>Timer (for convenience):</b></p> <p id="timer" class="timer">3:00:00</p>
+
+      <h3>Problem 1:</h3>
+      <div class="problem">
+         If there exist three distinct positive primes \(p\) that satisfy the equation \[p^4 + ap^3 + bp^2 + cp + 2020 = 0\] for integers \(a\), \(b\), and \(c\), what is the absolute value of \(a + b + c\)?
+         <br><br>
+         \(\textbf{(A) }871\qquad\textbf{(B) }1621\qquad\textbf{(C) }2019\qquad\textbf{(D) }2020\qquad\textbf{(E) }2419\)
+      </div>
+      <input type="radio" name="1" id="1A" onClick="wrong()"><label for="1A">A</label>
+      <input type="radio" name="1" id="1B" onClick="right()"><label for="1B">B</label>
+      <input type="radio" name="1" id="1C" onClick="wrong()"><label for="1C">C</label>
+      <input type="radio" name="1" id="1D" onClick="wrong()"><label for="1D">D</label>
+      <input type="radio" name="1" id="1E" onClick="wrong()"><label for="1E">E</label>
+      <input type="radio" name="1" id="1F" onClick="blank()"><label for="1F">Leave Blank</label>
+      <h3>Problem 2:</h3>
+      <div class="problem">
+         Find the remainder when the number of positive divisors of the value \[\left(3^{2020}+3^{2021}\right)\left(3^{2021}+3^{2022}\right)\left(3^{2022}+3^{2023}\right)\left(3^{2023}+3^{2024}\right)\] is divided by \(1000\).
+      </div>
+      <input type="text" id="2" name="2">
+      <br><br><br>
+<p id="score"></p>
+<br><br>
+      <input type="button" value="Submit" onclick="score()">
+
+
+      <script>
+         let x = 0;
+         let y = 0;
+	 var t = 10800;
+	 var h;
+	 var m;
+	 var s;
+
+setInterval(function() {
+t = t-1;
+h = Math.floor(t/3600);
+m = Math.floor((t - h*3600)/60);
+s = t - h*3600 - m*60;
+document.getElementById("timer").innerHTML = h + ":" + m + ":" + s;
+}, 1000);
+
+         function wrong() {
+         x = 0;
+         }
+         function right() {
+         x = 6;
+         }
+         function blank() {
+         x = 1.5;
+         }
+         
+         function score() {
+         var answer = document.getElementById('2').value;	
+         if (answer == '783') {
+         y = 1;
+         }
+document.getElementById("score").innerHTML='<center>Congratulations! Your score is <b>' + (x+y) + '</b>!</center>';
+         }
+
+
+      </script>
+   </body>
+</html>

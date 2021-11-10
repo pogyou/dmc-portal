@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+background: url(https://mario.wiki.gallery/images/5/55/SMO_Snow_Brochure_Art.png);
+}
+body{
+font-family: Roboto;
+margin-left: auto;
+margin-right: auto;
+width: 70%;
+background: white;
+opacity: 0.8;
+padding: 20px;
+}
+.problem{
+margin-bottom: 40px;
+padding: 20px;
+border-top: solid 10px #85b8c7;
+border-style: solid none none none;
+box-shadow: 0px 10px 10px #85b8c7;
+background: #e9e9ed;
+border-radius: 5px;
+transition: 0.5s;
+}
+.problem:hover{
+border-radius: 0px;
+box-shadow: 0px 10px 10px #76a3b0;
+}
+h3{
+color: #85b8c7; 
+}
+input[type='radio']{
+transform: scale(2);
+margin-bottom: 20px;
+}
+input[type='button']{
+transform: scale(2);
+margin-left: 45%;
+}
+label{
+margin: 8px;
+margin-bottom: 20px;
+}
+.timer{
+margin-bottom: 40px;
+}
