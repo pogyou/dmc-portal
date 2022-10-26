@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-background: url("SMO_Snow_Brochure_Art.png");
-background-position: fixed;
+background: url(https://artofproblemsolving.com/assets/images/top/pattern-online-gray.png);
 }
 body{
 font-family: Roboto;
